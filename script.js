@@ -1,28 +1,19 @@
-// Por qual motivo o código abaixo retorna com erros?
-{
-  var cor = 'preto';
-  var marca = 'Fiat';
-  var portas = 4;
-}
-console.log(cor , marca, portas);
+const tabMenu = document.querySelectorAll(".js-tabmenu li");
+const tabContent = document.querySelectorAll(".js-tabcontent section");
 
-// Como corrigir o erro abaixo?
-const dois = 2;
-function somarDois(x) {
-  return x + dois;
-}
-function dividirDois(x) {
-  return x + dois;
-}
-somarDois(4);
-dividirDois(6);
-
-// O que fazer para total retornar 500?
-const numero = 50;
-
-for(let numero = 0; numero < 10; numero++) {
-  console.log(numero);
+if(tabMenu.length && tabContent.length) {
+  tabContent[0].classList.add("ativo");
+  
+  function activeTab(index) {
+  tabContent.forEach((section) => {
+    section.classList.remove("ativo")
+  });
+  tabContent[index].classList.add("ativo");
 }
 
-const total = 10 * numero;
-console.log(total);
+tabMenu.forEach((itemMenu, index) => {
+  itemMenu.addEventListener("click", () => {
+    activeTab(index);
+  });
+});
+}
