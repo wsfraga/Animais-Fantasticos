@@ -11,7 +11,7 @@ O projeto ainda está em desenvolvimento, pois as aulas continuam sendo aplicada
 
 # 📷 Preview
 
-![preview do projeto](./img/preview.png)
+![preview do projeto](./assets/img/preview.png)
 
 ---
 
